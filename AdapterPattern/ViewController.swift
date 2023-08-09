@@ -9,11 +9,34 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+       
+        let frogAdaptee = FrogAdaptee()
+        let frogAdapter = FrogAdapter(frogeAdaptee: frogAdaptee)
+        frogAdapter.Jump()
+        
+        printAnimalsWhatCabJump(animals: [dog(),cat(),frogAdapter])
     }
-
-
+    
+    func printAnimalsWhatCabJump(animals:[JumpingProtocol]){
+        for animal in animals {
+            print(animal.Jump())
+        }
+    }
 }
 
+class cat:JumpingProtocol {
+    func Jump() {
+        print("iam cat and can jump")
+    }
+}
+
+class dog:JumpingProtocol{
+    func Jump() {
+        print("iam dog and can jump")
+    }
+    
+}

@@ -13,6 +13,9 @@
 		F8ABBF9F2A83A5C60026D80D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8ABBF9D2A83A5C60026D80D /* Main.storyboard */; };
 		F8ABBFA12A83A5C80026D80D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8ABBFA02A83A5C80026D80D /* Assets.xcassets */; };
 		F8ABBFA42A83A5C80026D80D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8ABBFA22A83A5C80026D80D /* LaunchScreen.storyboard */; };
+		F8ABBFAE2A83A6660026D80D /* JumpingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ABBFAD2A83A6660026D80D /* JumpingProtocol.swift */; };
+		F8ABBFB42A83A75F0026D80D /* FrogAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ABBFB32A83A75F0026D80D /* FrogAdapter.swift */; };
+		F8ABBFB72A83A78B0026D80D /* FrogAdaptee.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ABBFB62A83A78B0026D80D /* FrogAdaptee.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		F8ABBFA02A83A5C80026D80D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8ABBFA32A83A5C80026D80D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8ABBFA52A83A5C80026D80D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8ABBFAD2A83A6660026D80D /* JumpingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpingProtocol.swift; sourceTree = "<group>"; };
+		F8ABBFB32A83A75F0026D80D /* FrogAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrogAdapter.swift; sourceTree = "<group>"; };
+		F8ABBFB62A83A78B0026D80D /* FrogAdaptee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrogAdaptee.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 		F8ABBF962A83A5C60026D80D /* AdapterPattern */ = {
 			isa = PBXGroup;
 			children = (
+				F8ABBFAB2A83A5DC0026D80D /* AdapterPatternExample */,
 				F8ABBF972A83A5C60026D80D /* AppDelegate.swift */,
 				F8ABBF992A83A5C60026D80D /* SceneDelegate.swift */,
 				F8ABBF9B2A83A5C60026D80D /* ViewController.swift */,
@@ -65,6 +72,40 @@
 				F8ABBFA52A83A5C80026D80D /* Info.plist */,
 			);
 			path = AdapterPattern;
+			sourceTree = "<group>";
+		};
+		F8ABBFAB2A83A5DC0026D80D /* AdapterPatternExample */ = {
+			isa = PBXGroup;
+			children = (
+				F8ABBFB52A83A77A0026D80D /* Adaptee */,
+				F8ABBFB22A83A7510026D80D /* Adapter */,
+				F8ABBFAC2A83A5F50026D80D /* Protocol */,
+			);
+			path = AdapterPatternExample;
+			sourceTree = "<group>";
+		};
+		F8ABBFAC2A83A5F50026D80D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F8ABBFAD2A83A6660026D80D /* JumpingProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		F8ABBFB22A83A7510026D80D /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				F8ABBFB32A83A75F0026D80D /* FrogAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		F8ABBFB52A83A77A0026D80D /* Adaptee */ = {
+			isa = PBXGroup;
+			children = (
+				F8ABBFB62A83A78B0026D80D /* FrogAdaptee.swift */,
+			);
+			path = Adaptee;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +180,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8ABBF9C2A83A5C60026D80D /* ViewController.swift in Sources */,
+				F8ABBFB42A83A75F0026D80D /* FrogAdapter.swift in Sources */,
 				F8ABBF982A83A5C60026D80D /* AppDelegate.swift in Sources */,
 				F8ABBF9A2A83A5C60026D80D /* SceneDelegate.swift in Sources */,
+				F8ABBFB72A83A78B0026D80D /* FrogAdaptee.swift in Sources */,
+				F8ABBFAE2A83A6660026D80D /* JumpingProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +339,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +368,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
